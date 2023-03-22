@@ -17,8 +17,8 @@ Looking at the change in different demographics of states over the years and som
 #### Original Data Files
 This is the dataset I used for my midterm project that I will be reusing:
 
-*The URL to access the dataset*:
+**The URL to access the dataset**:
 https://raw.githubusercontent.com/BlakeRivers25/SCDV490-FinalProject-BlakeRivers/main/county_census_and_election_result.csv
 
-*The URL to access the Meta Data about this dataset*:
+**The URL to access the Meta Data about this dataset**:
 https://raw.githubusercontent.com/BlakeRivers25/SCDV490-FinalProject-BlakeRivers/main/meta_data.csv
