@@ -14,7 +14,6 @@ Looking at the change in different demographics of states over the years and som
 
 ## Where to access Data
 
-
 #### Original Data Files
 This is the dataset I used for my midterm project that I will be reusing:
 
@@ -26,3 +25,15 @@ https://raw.githubusercontent.com/BlakeRivers25/SCDV490-FinalProject-BlakeRivers
 *The URL to access the Meta Data about this dataset*:
 
 https://raw.githubusercontent.com/BlakeRivers25/SCDV490-FinalProject-BlakeRivers/main/meta_data.csv
+
+
+
+## How to Install
+Fill me out!!!!
+
+
+
+
+
+## How to Run Code
+Fill me out!!!!
