@@ -9,3 +9,7 @@ Looking at the change in different demographics of states over the years and som
 - Find clusters of states that are similiar to each other
 - Do a clustering algorithm on them that clusters similiar ones together
 - Talk about the states that get clustered together and similarites between them
+
+
+
+## Where to access Data
