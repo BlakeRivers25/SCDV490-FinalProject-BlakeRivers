@@ -28,7 +28,8 @@ https://raw.githubusercontent.com/BlakeRivers25/SCDV490-FinalProject-BlakeRivers
 
 
 #### New Census Data Files
-*Link to US Cnesus Bureau Datasets*
+*Link to US Cnesus Bureau Datasets*:
+
 https://data.census.gov/
 
 
