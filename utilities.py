@@ -11,7 +11,8 @@ def parse_csv_file_to_dataframe(infilename, filetype='income'):
     infile = open(infilename)
     
     #print(infilename)
-
+    
+#Part of function to clean up Income Datasets
     if filetype=='income':
     
         line = infile.readline()
@@ -68,7 +69,8 @@ def parse_csv_file_to_dataframe(infilename, filetype='income'):
         d['Median'] = incomes[11]
 
         df = pd.DataFrame.from_dict(d)
-
+        
+#Part of function to clean up Population and Demographics Datasets
     elif filetype=='demographics':
     
         line = infile.readline()
@@ -84,7 +86,7 @@ def parse_csv_file_to_dataframe(infilename, filetype='income'):
             #print(line)
             vals = line.split(',')
             nvals = len(vals)
-            print(nvals)
+            #print(nvals)
             if nvals==27:
                 if vals[0].find('Total')<0 and vals[0].find('Percent')<0:
                     state.append(vals[0])
@@ -116,18 +118,18 @@ def parse_csv_file_to_dataframe(infilename, filetype='income'):
                         inc.append(x)
                 incomes.append(inc)
 
-        print(incomes)
+        #print(incomes)
         
         for i in incomes:
-            print(len(i))
+            #print(len(i))
 
         incomes = np.array(incomes).T
 
-        print()
+        #print()
         
         for i in incomes:
-            print(len(i))
-            print(i)
+            #print(len(i))
+            #print(i)
         
         d = {}
         d['State'] = state
@@ -145,7 +147,7 @@ def parse_csv_file_to_dataframe(infilename, filetype='income'):
         d['Median'] = incomes[11]
         
         
-        print(d)
+        #print(d)
 
         df = pd.DataFrame.from_dict(d)
 
