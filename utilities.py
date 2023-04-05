@@ -7,7 +7,7 @@ def getDataFrame(infilename):
     return df
 
 
-def parse_csv_file_to_dataframe(infilename, filetype='income'):
+def parse_csv_file_to_dataframe(infilename, filetype='income', fileyear='year'):
     infile = open(infilename)
     #print(infilename)
     #Part of function to clean up Income Datasets
@@ -112,18 +112,33 @@ def parse_csv_file_to_dataframe(infilename, filetype='income'):
             #print(i)
         d = {}
         d['State'] = state
-        d['# of households'] = incomes[0]
-        d['0-10000'] = incomes[1]
-        d['10000-15000'] = incomes[2]
-        d['15000-25000'] = incomes[3]
-        d['25000-35000'] = incomes[4]
-        d['35000-50000'] = incomes[5]
-        d['50000-75000'] = incomes[6]
-        d['75000-100000'] = incomes[7]
-        d['100000-150000'] = incomes[8]
-        d['150000-200000'] = incomes[9]
-        d['200000-100000000'] = incomes[10]
-        d['Median'] = incomes[11]
+        d['Population'] = incomes[0]
+        d['Male'] = incomes[1]
+        d['Female'] = incomes[2]
+        d['Under 5 yrs'] = incomes[3]
+        d['5-9 yrs'] = incomes[4]
+        d['10-14 yrs'] = incomes[5]
+        d['15-19 yrs'] = incomes[6]
+        d['20-24 yrs'] = incomes[7]
+        d['25-34 yrs'] = incomes[8]
+        d['35-44 yrs'] = incomes[9]
+        d['45-54 yrs'] = incomes[10]
+        d['55-59 yrs'] = incomes[11]
+        d['60-64 yrs'] = incomes[12]
+        d['65-74 yrs'] = incomes[13]
+        d['75-84 yrs'] = incomes[14]
+        d['85 yrs and Older'] = incomes[15]
+        d['Median Age'] = incomes[16]
+        d['18 yrs and Older'] = incomes[17]
+        d['65 yrs and Older'] = incomes[18]
+        if fileyear=='2010' or fileyear=='2020':
+            d['Population'] = incomes[19]
+            d['White'] = incomes[20]
+            d['Black or African American'] = incomes[21]
+            d['American Indian and Alaska Native'] = incomes[22]
+            d['Asian'] = incomes[23]
+            d['Native Hawaiian and Other Pacific Islander'] = incomes[24]
+            d['Some Other Race'] = incomes[25]
         #print(d)
         df = pd.DataFrame.from_dict(d)
     return df
