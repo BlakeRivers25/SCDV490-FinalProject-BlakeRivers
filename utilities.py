@@ -7,7 +7,7 @@ def getDataFrame(infilename):
     return df
 
 
-def parse_csv_file_to_dataframe(infilename, filetype='income', fileyear='year'):
+def parse_csv_file_to_dataframe(infilename, filetype='income/demographics', fileyear='year'):
     infile = open(infilename)
     #print(infilename)
     #Part of function to clean up Income Datasets
@@ -73,14 +73,18 @@ def parse_csv_file_to_dataframe(infilename, filetype='income', fileyear='year'):
             vals = line.split(',')
             nvals = len(vals)
             #print(nvals)
-            if nvals==27:
+            if nvals==26:
                 if vals[0].find('Total')<0 and vals[0].find('Percent')<0:
+                    state.append(vals[0])
+                    #print(vals)
+            elif nvals==20:
+                if vals[0].find('Total population')<0 and vals[0].find('Number')<0 and vals[0].find('Percent')<0:
                     state.append(vals[0])
                     #print(vals)
             else:
                 newvals = line.split('\"')
                 #print(newvals)
-                if newvals[0].find('Estimate')<0 or newvals[0].find('Percent')>=0:
+                if newvals[0].find('Number')<0 or newvals[0].find('Percent')>=0:
                     continue
                     
                 #print('here')
@@ -132,14 +136,14 @@ def parse_csv_file_to_dataframe(infilename, filetype='income', fileyear='year'):
         d['18 yrs and Older'] = incomes[17]
         d['65 yrs and Older'] = incomes[18]
         if fileyear=='2010' or fileyear=='2020':
-            d['Population'] = incomes[19]
-            d['White'] = incomes[20]
-            d['Black or African American'] = incomes[21]
-            d['American Indian and Alaska Native'] = incomes[22]
-            d['Asian'] = incomes[23]
-            d['Native Hawaiian and Other Pacific Islander'] = incomes[24]
-            d['Some Other Race'] = incomes[25]
+            d['White'] = incomes[19]
+            d['Black or African American'] = incomes[20]
+            d['American Indian and Alaska Native'] = incomes[21]
+            d['Asian'] = incomes[22]
+            d['Native Hawaiian and Other Pacific Islander'] = incomes[23]
+            d['Some Other Race'] = incomes[24]
         #print(d)
+        #print(d['State'])
         df = pd.DataFrame.from_dict(d)
     return df
 
