@@ -23,11 +23,11 @@ def parse_csv_file_to_dataframe(infilename, filetype='income/demographics', file
             vals = line.split(',')
             nvals = len(vals)
             #print(nvals)
-            if nvals==13:
-                if vals[0].find('Total')<0 and vals[0].find('Percent')<0:
+            if nvals==14 and fileyear=='2000':
+                if vals[0].find('Total population')<0 and vals[0].find('Number')<0 and vals[0].find('Percent')<0:
                     state.append(vals[0])
                     #print(state)
-                    #print(vals)
+                    #print(vals)     
             else:
                 newvals = line.split('\"')
                 #print(newvals)
@@ -58,6 +58,7 @@ def parse_csv_file_to_dataframe(infilename, filetype='income/demographics', file
         d['150000-200000'] = incomes[9]
         d['200000-100000000'] = incomes[10]
         d['Median'] = incomes[11]
+        d['Mean'] = incomes[12]
         df = pd.DataFrame.from_dict(d)
 
     #Part of function to clean up Population and Demographics Datasets
@@ -84,7 +85,7 @@ def parse_csv_file_to_dataframe(infilename, filetype='income/demographics', file
             else:
                 newvals = line.split('\"')
                 #print(newvals)
-                if newvals[0].find('Number')<0 or newvals[0].find('Percent')>=0:
+                if newvals[0].find('Estimate')<0 or newvals[0].find('Percent')>=0:
                     continue
                     
                 #print('here')
