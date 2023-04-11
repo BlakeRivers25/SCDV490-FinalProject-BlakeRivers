@@ -33,11 +33,11 @@ https://raw.githubusercontent.com/BlakeRivers25/SCDV490-FinalProject-BlakeRivers
 
 
 *The URL to access 2000 Income Data*:
-[Click Here](https://raw.githubusercontent.com/BlakeRivers25/SCDV490-FinalProject-BlakeRivers/main/Data%20Sets/2000%20Income%20Cleaned.csv)
+[Click Here For 2000 Income](https://raw.githubusercontent.com/BlakeRivers25/SCDV490-FinalProject-BlakeRivers/main/Data%20Sets/2000%20Income%20Cleaned.csv)
 
 
 *The URL to access 2000 Population Data*:
-[Click Here](https://raw.githubusercontent.com/BlakeRivers25/SCDV490-FinalProject-BlakeRivers/main/Data%20Sets/2000%20Population%20Cleaned.csv)
+[Click Here For 2000 Population](https://raw.githubusercontent.com/BlakeRivers25/SCDV490-FinalProject-BlakeRivers/main/Data%20Sets/2000%20Population%20Cleaned.csv)
 
 
 *The URL to access 2010 Income Data*:
