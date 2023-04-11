@@ -56,11 +56,6 @@ https://raw.githubusercontent.com/BlakeRivers25/SCDV490-FinalProject-BlakeRivers
 https://raw.githubusercontent.com/BlakeRivers25/SCDV490-FinalProject-BlakeRivers/main/Data%20Sets/2020%20Income%20Cleaned.csv
 
 *The URL to access 2020 Population Data*:
-
-https://raw.githubusercontent.com/BlakeRivers25/SCDV490-FinalProject-BlakeRivers/main/Data%20Sets/2020%20Population%20and%20Demographics%20Cleaned.csv
-
-
-
 Click 
 [here](https://raw.githubusercontent.com/BlakeRivers25/SCDV490-FinalProject-BlakeRivers/main/Data%20Sets/2020%20Population%20and%20Demographics%20Cleaned.csv)
 
