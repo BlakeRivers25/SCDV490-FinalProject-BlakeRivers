@@ -70,7 +70,7 @@ On the page, simply click "download" and once downloaded, open the file download
 Once completely downloaded, start up Anaconda and launch a Jupter Lab environment.
 
 #### To Download Git Bash
-To download Git Bash on your local computer: [Click Here](https://gitforwindows.org/)
+To download Git Bash on your local computer: [Click HERE](https://gitforwindows.org/)
 
 Once downloaded you are ready to use.
 
