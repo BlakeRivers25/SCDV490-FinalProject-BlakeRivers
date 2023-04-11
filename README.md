@@ -15,7 +15,7 @@ Looking at the change in different demographics of states over the years and som
 ## Where to access Data
 
 #### Original Data Files
-This is the dataset I used for my midterm project that I will be reusing:
+This is the dataset I used for my midterm project that started the questions for this project:
 
 
 *The URL to access the dataset*:
