@@ -13,7 +13,7 @@ Looking at the change in different demographics of states over the years and som
 
 
 ## Where to access Data
-These Datasets are located within this repository in the [Data Sets Folder](https://github.com/BlakeRivers25/SCDV490-FinalProject-BlakeRivers/tree/main/Data%20Sets)
+### These Datasets are also located within this repository in the [Data Sets Folder](https://github.com/BlakeRivers25/SCDV490-FinalProject-BlakeRivers/tree/main/Data%20Sets)
 
 #### Original Data Files
 This is the dataset I used for my midterm project that started the questions for this project:
