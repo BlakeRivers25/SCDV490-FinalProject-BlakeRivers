@@ -59,6 +59,7 @@ This is the dataset I used for my midterm project that started the questions for
 
 
 ## How to Install 
+### These instillation instructions are for Windows users.  MAC users may need to find different ways.
 #### To Download/Run Anaconda and Jupyter Lab
 These are the applications I used to do this project.
 
@@ -69,6 +70,10 @@ On the page, simply click "download" and once downloaded, open the file download
 Once completely downloaded, start up Anaconda and launch a Jupter Lab environment.
 
 #### To Download Git Bash
+To download Git Bash on your local computer: [Click Here](https://gitforwindows.org/)
+
+Once downloaded you are ready to use.
+
 
 #### Cloning the Repository
 To clone this repository and run for yourself:
