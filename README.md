@@ -19,12 +19,11 @@ This is the dataset I used for my midterm project that I will be reusing:
 
 
 *The URL to access the dataset*:
-
-https://raw.githubusercontent.com/BlakeRivers25/SCDV490-FinalProject-BlakeRivers/main/Data%20Sets/county_census_and_election_result.csv
+[Click Here For Midterm Dataset](https://raw.githubusercontent.com/BlakeRivers25/SCDV490-FinalProject-BlakeRivers/main/Data%20Sets/county_census_and_election_result.csv)
 
 *The URL to access the Meta Data about this dataset*:
+[Click Here For Meta Data](https://raw.githubusercontent.com/BlakeRivers25/SCDV490-FinalProject-BlakeRivers/main/Data%20Sets/county_census_election_results_META_DATA.csv)
 
-https://raw.githubusercontent.com/BlakeRivers25/SCDV490-FinalProject-BlakeRivers/main/Data%20Sets/county_census_election_results_META_DATA.csv
 
 
 #### New Census Data Files
