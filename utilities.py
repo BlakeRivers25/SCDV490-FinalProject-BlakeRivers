@@ -7,11 +7,11 @@ def getDataFrame(infilename):
     return df
 
 
-def parse_csv_file_to_dataframe(infilename, filetype='income/demographics', fileyear='year'):
+def parse_csv_file_to_dataframe(infilename, filetype, fileyear):
     infile = open(infilename)
     #print(infilename)
     #Part of function to clean up Income Datasets
-    if filetype=='income':
+    if filetype=='income' and fileyear=='2000':
         line = infile.readline()
         #print(line)
         vals = line.split('\"')
@@ -23,7 +23,7 @@ def parse_csv_file_to_dataframe(infilename, filetype='income/demographics', file
             vals = line.split(',')
             nvals = len(vals)
             #print(nvals)
-            if nvals==14 and fileyear=='2000':
+            if nvals==14:
                 if vals[0].find('Total population')<0 and vals[0].find('Number')<0 and vals[0].find('Percent')<0:
                     state.append(vals[0])
                     #print(state)
@@ -60,6 +60,84 @@ def parse_csv_file_to_dataframe(infilename, filetype='income/demographics', file
         d['Median'] = incomes[11]
         d['Mean'] = incomes[12]
         df = pd.DataFrame.from_dict(d)
+    
+    elif filetype=='income' and (fileyear=='2010' or fileyear=='2020'):
+        line = infile.readline()
+        #print(line)
+        vals = line.split('\"')
+        #print(vals)
+        state = []
+        incomes = []
+        STORE_NEXT = False
+        for line in infile:
+            #print(line)
+            vals = line.split(',')
+            nvals = len(vals)
+            #print(nvals)
+            if nvals==14:
+                if vals[0].find('ouseholds')<0 and vals[0].find('amilies')<0:
+                    state.append(vals[0])
+                    #print(state)
+                    #print(vals)     
+                elif vals[0].find('Households')>=0:
+                    STORE_NEXT = True
+            else:
+                # If the previous found Households
+                if STORE_NEXT == False:
+                    continue
+                    
+                # Skip for next time
+                STORE_NEXT = False
+                
+                newvals = line.split('\"')
+                #print(newvals)
+                #print(len(newvals))
+                if newvals[0].find('Estimate')<0:
+                    continue
+                    
+                # Pack the values
+                icount = 0
+                inc = []
+                inc.append(int(newvals[1].replace(',','')))
+                pcts = newvals[2].split(',')
+                for i in range(len(pcts)):
+                    x = pcts[i]
+                    if len(x)>1:
+                        x = float(x[:-1])
+                        inc.append(x)
+                inc.append(int(newvals[3].replace(',',''))) # Median 
+                inc.append(int(newvals[5].replace(',',''))) # Mean
+
+                incomes.append(inc)
+
+        incomes = np.array(incomes).T
+        #print(incomes)
+        d = {}
+        d['State'] = state
+        d['# of households'] = incomes[0]
+        d['0-10000'] = incomes[1]
+        d['10000-15000'] = incomes[2]
+        d['15000-25000'] = incomes[3]
+        d['25000-35000'] = incomes[4]
+        d['35000-50000'] = incomes[5]
+        d['50000-75000'] = incomes[6]
+        d['75000-100000'] = incomes[7]
+        d['100000-150000'] = incomes[8]
+        d['150000-200000'] = incomes[9]
+        d['200000-100000000'] = incomes[10]
+        d['Median'] = incomes[11]
+        d['Mean'] = incomes[12]
+        df = pd.DataFrame.from_dict(d)
+        
+        h = df['# of households']
+        
+        names = df.columns
+        for name in names:
+            #print(name)
+            if name.find('-')>=0:
+                pct = df[name]/100.0
+                n = pct * h
+                df[name] = n
 
     #Part of function to clean up Population and Demographics Datasets
     elif filetype=='demographics':
@@ -69,6 +147,13 @@ def parse_csv_file_to_dataframe(infilename, filetype='income/demographics', file
         #print(vals)
         state = []
         incomes = []
+
+        WORD_TO_FIND = 'Estimate'
+        if fileyear=='2000':
+            WORD_TO_FIND = 'Number'
+        elif fileyear=='2010' or fileyear=='2020':
+            WORD_TO_FIND = 'Estimate'
+                        
         for line in infile:
             #print(line)
             vals = line.split(',')
@@ -79,13 +164,14 @@ def parse_csv_file_to_dataframe(infilename, filetype='income/demographics', file
                     state.append(vals[0])
                     #print(vals)
             elif nvals==20:
-                if vals[0].find('Total population')<0 and vals[0].find('Number')<0 and vals[0].find('Percent')<0:
+                if vals[0].find('Total population')<0 and vals[0].find(WORD_TO_FIND)<0 and vals[0].find('Percent')<0:
                     state.append(vals[0])
                     #print(vals)
             else:
                 newvals = line.split('\"')
                 #print(newvals)
-                if newvals[0].find('Estimate')<0 or newvals[0].find('Percent')>=0:
+                
+                if newvals[0].find(WORD_TO_FIND)<0 or newvals[0].find('Percent')>=0:
                     continue
                     
                 #print('here')
@@ -111,10 +197,13 @@ def parse_csv_file_to_dataframe(infilename, filetype='income/demographics', file
         #for i in incomes:
             #print(len(i))
         incomes = np.array(incomes).T
+        
         #print()
-            #for i in incomes:
-            #print(len(i))
-            #print(i)
+        #print("HERE!!!!")
+        #for i in incomes:
+        #    print(len(i))
+        #    print(i)
+        
         d = {}
         d['State'] = state
         d['Population'] = incomes[0]
