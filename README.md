@@ -66,13 +66,14 @@ To download Anaconda onto your local computer: [Click HERE](https://www.anaconda
 
 On the page, simply click "download" and once downloaded, open the file download, located at the bottom of your screen, and finish the setup process.  
 
-Once completely downloaded, start up Anaconda and launch a Jupter Lab environment
+Once completely downloaded, start up Anaconda and launch a Jupter Lab environment.
 
 #### Cloning the Repository
 To clone this repository and run for yourself:
-1. Go to the [main page](https://github.com/BlakeRivers25/SCDV490-FinalProject-BlakeRivers) of this repository
-2. Click the green CODE button and you will see a unique URL
+1. Go to the [main page](https://github.com/BlakeRivers25/SCDV490-FinalProject-BlakeRivers) of this repository.
+2. Click the green CODE button and you will see a unique URL.
 3. Copy this URL into your GIT command promt using the line "git clone https://github.com/BlakeRivers25/SCDV490-FinalProject-BlakeRivers.git"
+4. Once this is done, you should be able to locate this project folder withing the file directory in Jupyter Lab.
 
 
 
