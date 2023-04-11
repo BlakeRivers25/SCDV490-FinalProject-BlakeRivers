@@ -61,8 +61,11 @@ This is the dataset I used for my midterm project that started the questions for
 ## How to Install 
 #### To Download/Run Anaconda and Juptyper Lab
 These are the applications I used to do this project.
+
 To download Anaconda onto your local computer: [Click HERE](https://www.anaconda.com/products/distribution)
+
 On the page, simply click "download" and once downloaded, open the file download, located at the bottom of your screen, and finish the setup process.  
+
 Once completely downloaded, start up Anaconda and launch a Jupter Lab environment
 
 #### Cloning the Repository
