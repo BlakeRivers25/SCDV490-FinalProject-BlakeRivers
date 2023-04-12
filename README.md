@@ -59,7 +59,7 @@ This is the dataset I used for my midterm project that started the questions for
 
 
 ## How to Install 
-### These instillation instructions are for Windows users.  MAC users may need to find different ways.
+### These installation instructions are for Windows users.  MAC users may need to find different ways.
 #### To Download/Run Anaconda and Jupyter Lab
 These are the applications I used to do this project.
 
