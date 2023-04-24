@@ -237,3 +237,20 @@ def parse_csv_file_to_dataframe(infilename, filetype, fileyear):
         df = pd.DataFrame.from_dict(d)
     return df
 
+
+#Function to take a df, state, and 2 column names and make a correlation of the 2 points
+def correlation_maker(dataframe, statename, column1, column2):
+    #Make a dataframe for the state that is being looked at
+    statedf = dataframe.loc[dataframe['State'] == 'statename']
+    print("State Dataframe")
+    print(statedf)
+    #Now pull out the values for the 2 columns as input
+    stateCol1 = statedf['column1']
+    print("StateCol1")
+    print(stateCol1)
+    stateCol2 = statedf['column2']
+    print("StateCol2")
+    print(stateCol2)
+    # Calculate the Correlation Coefficient
+    cc = np.corrcoef(stateCol1,stateCol2)[0][1]
+    print("The correlation coefficient for this dataset is {0:.3f}".format(cc))
