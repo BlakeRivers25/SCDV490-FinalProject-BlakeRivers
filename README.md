@@ -122,7 +122,11 @@ Each section of the project sits within its own markdown of code.  To view that 
 3. Perfromed clustering on 2010 - 2020 change in values data
 
 #### Findings
-(Arizona and Pennsylvania) and (Maine and Louisiana) 
+Similiar States:
+1. Arizona and Pennsylvania
+2. Maine and Louisiana) 
+
+Addional Findings:
 1. States were similiar to each other in 2020
 2. States had similiar changes to each other from 2010 - 2020
 3. Population age range graphs so similarities with Arizona and Louisiana have more of a younger population and Pennsylvania and Maine having an older population.
