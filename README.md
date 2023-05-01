@@ -92,5 +92,5 @@ Once the repository is cloned and open within a Jupyter Lab Environment:
 2. Simply run the code
 
 The graphs and findings of this research should appear right there!
-* A Quick Note : 
+*A Quick Note :*
 Each section of the project sits within its own markdown of code.  To view that section of code/analysis simply open up the section you want and run that section.
