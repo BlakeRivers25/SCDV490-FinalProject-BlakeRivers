@@ -99,7 +99,7 @@ To clone this repository and run for yourself:
 
 *test_cases.ipynb:*  Jupyter notebook that was used to test graphs and functions until they worked properly.
 
-*utilities.py:*  Python file that hold functions to clean up datasets and convert State names to abbreviations.
+*utilities.py:*  Python file that holds functions to clean up datasets and convert State names to abbreviations.
 
 
 #### Running the Analysis
