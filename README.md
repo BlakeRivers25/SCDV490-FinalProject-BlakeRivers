@@ -87,6 +87,22 @@ To clone this repository and run for yourself:
 
 
 ## How to Run Code
+
+#### What Each File Is
+*Data Sets:*  Holds the datasets that are used for this project.
+
+*README.md:*  This file you're reading.  Explains what everything does and how it works.
+
+*analysis.ipynb:*  Jupyter notebook that runs analysis on my datasets and creats graphs.
+
+*bellis_analysis.ipynb:*  Jupyter notebook used by Dr. Bellis with helpful code examples to use/follow.
+
+*test_cases.ipynb:*  Jupyter notebook that was used to test graphs and functions until they worked properly.
+
+*utilities.py:*  Python file that hold functions to clean up datasets and convert State names to abbreviations.
+
+
+#### Running the Analysis
 Once the repository is cloned and open within a Jupyter Lab Environment:
 1. Open analysis.ipynb
 2. Simply run the code
