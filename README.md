@@ -111,3 +111,18 @@ The graphs and findings of this research should appear right there!
 
 *A Quick Note :*
 Each section of the project sits within its own markdown of code.  To view that section of code/analysis simply open up the section you want and run that section.
+
+
+
+## Analysis/Findings
+
+#### Analysis
+1. Simple comparison graphs of value changes from 2010 - 2020
+2. Performed clustering on 2020 Data
+3. Perfromed clustering on 2010 - 2020 change in values data
+
+#### Findings
+(Arizona and Pennsylvania) and (Maine and Louisiana) 
+1. States were similiar to each other in 2020
+2. States had similiar changes to each other from 2010 - 2020
+3. Population age range graphs so similarities with Arizona and Louisiana have more of a younger population and Pennsylvania and Maine having an older population.
