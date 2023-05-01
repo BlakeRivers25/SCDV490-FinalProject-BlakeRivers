@@ -5,7 +5,7 @@ import numpy as np
 
 # Grabbed this from here
 # https://gist.github.com/rogerallen/1583593
-    
+# Converts State names to abbreviations so they are easier to graph
 us_state_to_abbrev = {
     "Alabama": "AL",
     "Alaska": "AK",
@@ -67,16 +67,16 @@ us_state_to_abbrev = {
 }
     
 
-
+#Converts a file to a dataframe
 def getDataFrame(infilename):
     df=pd.read_csv(infilename)
     return df
 
-
+#Takes in a filename, filetype, and year and cleans up the .csv file before returning it as a dataframe
 def parse_csv_file_to_dataframe(infilename, filetype, fileyear):
     infile = open(infilename)
     #print(infilename)
-    #Part of function to clean up Income Datasets
+    #Part of function to clean up Income 2000 Dataset
     if filetype=='income' and fileyear=='2000':
         line = infile.readline()
         #print(line)
@@ -126,7 +126,8 @@ def parse_csv_file_to_dataframe(infilename, filetype, fileyear):
         d['Median'] = incomes[11]
         d['Mean'] = incomes[12]
         df = pd.DataFrame.from_dict(d)
-    
+        
+    #Part of function to clean up Income 2010, 2020 Datasets
     elif filetype=='income' and (fileyear=='2010' or fileyear=='2020'):
         line = infile.readline()
         #print(line)
