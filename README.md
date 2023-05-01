@@ -124,7 +124,7 @@ Each section of the project sits within its own markdown of code.  To view that 
 #### Findings
 Similiar States:
 1. Arizona and Pennsylvania
-2. Maine and Louisiana) 
+2. Maine and Louisiana
 
 Addional Findings:
 1. States were similiar to each other in 2020
