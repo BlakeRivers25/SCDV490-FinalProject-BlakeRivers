@@ -91,7 +91,7 @@ To clone this repository and run for yourself:
 #### What Each File Is
 *Data Sets:*  Holds the datasets that are used for this project.
 
-*README.md:*  This file you're reading.  Explains what everything does and how it works.
+*README.md:*  Explains what everything does and how it works.
 
 *analysis.ipynb:*  Jupyter notebook that runs analysis on my datasets and creats graphs.
 
